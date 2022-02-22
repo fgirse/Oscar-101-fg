@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import Image from "next/image";
+
 export default function MyModal() {
   let [isOpen, setIsOpen] = useState(false);
 

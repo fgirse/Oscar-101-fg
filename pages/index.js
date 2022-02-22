@@ -1,7 +1,6 @@
-/* eslint-disable prettier/prettier */
+import React from "react";
 import Link from "/components/Link";
 import { PageSEO } from "/components/SEO";
-/* eslint-disable prettier/prettier */
 import StyledButton from "/components/Buttons/Button";
 import Flensburger from "../components/icons/svg/SVGFlensburger";
 import Ganter from "../components/icons/svg/SVGGanter";
@@ -15,6 +14,7 @@ import InfoBar from "../components/InfoBar";
 import sketchy from "theme-ui-sketchy-preset";
 import { PhoneIcon } from "@heroicons/react/solid";
 import { AtSymbolIcon } from "@heroicons/react/solid";
+import { MailIcon } from "@heroicons/react/solid";
 import Tag from "/components/Tag";
 import siteMetadata from "/data/siteMetadata";
 import { getAllFilesFrontMatter } from "/lib/mdx";
@@ -69,11 +69,11 @@ export default function Home({ posts }) {
       />
       <SectionContainer>
         <div className="mx-auto bg-slate-900 min-h-screen flex flex-col w-12/12">
-          <section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero3.png')] w-full h-[calc(100vh-44vh)] bg-cover bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-13vh-14vh)]"></section>
+          <section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero3.png')] w-full h-[calc(100vh-44vh)] bg-cover bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-13vh-16vh)]"></section>
           <section className="hidden lg:block lg:mx-auto lg:mt-2 lg:rounded-3xl lg:w-screen bg-slate-900 lg:h-[14vh] ">
-            <div className="grid grid-cols-1 md:grid md:grid-cols-[7fr_6fr]  items-end justify-center">
+            <div className="grid grid-cols-1 md:grid md:grid-cols-[7fr_6fr]  items-center justify-center">
               <div className="">
-                <h1 className=" ml-5 headingB text-amber-100 lg:text-2xl xl:text-3xl 2xl:px-4 2xl:text-[3.5rem] font-black">
+                <h1 className=" ml-5 headingB text-red-600 lg:text-xl xl:text-1xl [1.333rem]:px-4 2xl:text-[2.6666rem] font-black">
                   Dein Treffpunkt in Freiburg !!!
                 </h1>
               </div>
@@ -85,7 +85,7 @@ export default function Home({ posts }) {
           {/*======================================================================= SECTION A ===========================================================*/}
 
           <section className="mt-[2vh] mx-auto w-full md:-mt-[13vh] lg:mt-[3vh]">
-            <div className=" w-11/12 h-96  mx-auto grid grid-cols-1 lg:grid lg:grid-cols-[1fr_2fr] lg:content-stretch lg:justify-around lg:gap-x-2">
+            <div className=" w-11/12 h-96  mx-auto grid grid-cols-1 lg:grid lg:grid-cols-[1fr_2fr] lg:content-stretch lg:justify-between lg:gap-x-6">
               <div className=" w-full h-36 py-2">
                 <p className="mb-2 text-center text-2xl font-bold tracking-tight text-yellow-500 dark:text-white uppercase md:text-4xl xl:text-5xl">
                   öfffnungzeiten
@@ -96,19 +96,29 @@ export default function Home({ posts }) {
                 <p className="text-center text-xs sm:text-2xl md:text-base  text-gray-300 lg:text-xl xl:text-">
                   Freitag und Samstag: 15 bis 03 Uhr
                 </p>
+                <div className="mx-auto  xl:mt-20 px-12 ">
+                  <button
+                    type="button"
+                    className="inline-flex justify-center px-4 py-2 text-xl md:text-4xl font-medium font-sans text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 lg:mb-6">
+                        <a class="ui btn" href="mailto:rettungsanker-freiburg@gmx.de?Subject=Enquiry"><MailIcon className="mr-1 w-12 h-12 fill-slate-700 inline" />SOS Rettungsanker</a>
+                  </button>
+                  <p className="text-white text-sm">Schreiben Sie uns gerne Ihre Eindrücke zu Ihrem Besuch im Rettungsanker. Am wichtigsten aber: geben Sie uns Reflexion, wenn etwas nicht zu Ihrer Zufriedenheit vorgefallen ist! Nur so können wir uns als Ihr Gastgeber stetig verbessern und Ihnen als Gast zukünftig noch besser gerechtwerden.  </p>
+                  unseren Gästen
+                </div>
+
               </div>
 
               <div className="w-full mx-auto md:hidden">
                 <Modal6></Modal6>
               </div>
 
-              <div className="mt-5w-10/12 flex flex-col items-center bg-red-900 rounded-2xl border shadow-md md:flex-row lg:w-full  dark:border-gray-700 dark:bg-gray-800 ">
+                <div className="mt-5w-11/12 flex flex-col items-center bg-red-900 rounded-2xl border shadow-md md:flex-row lg:w-11/12 -gray-700 dark:bg-gray-800 ">
                 <img className="p-3" src="/portrait-mick1.png" alt="portrait" />
                 <div className="w-full flex flex-col justify-between p-4 leading-normal">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-yellow-500 dark:text-white xl:text-5xl">
                     "Moin Moin"
                   </h5>
-                  <p className="newspaper mb-1 font-normal text- text-gray-100 dark:text-gray-400">
+                  <p className="newspaperA mb-1 font-normal text- text-gray-100 dark:text-gray-400">
                     In Hommage an eine typische Kiez-Kneipe auf St.Pauli, haben
                     wir im Herzen von Freiburg ein Lokal eröffnet, welches es so
                     südlich der Elbe wohl kein zweites Mal gibt. Ausgebaut im
@@ -130,27 +140,33 @@ export default function Home({ posts }) {
           </section>
 
           {/*========================== ENDE SECTION A ===================================================*/}
+         
+              
+          
+          
+          
           <div className="mt-12 flex flex-col md:flex md:flex-row items-baseline">
-            <div className="hidden md:block w-7/12 z-10 mt- md:transform -translate-y-10 md:w-5/12 xl:w-4/12 xl:transform: xl:-translate-y-60">
+            <div className="hidden md:block w-7/12 z-10 mt- md:transform -translate-y-10 md:w-44 4/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
               <Image
                 src="/lighthousebw.svg"
+                cIOIC
                 alt="illustration"
                 layout="responsive"
                 height={473}
                 width={473}
               />
             </div>
-            <div className="hidden md:block md:w-5/12  right-7 transform -translate-y-1 md:right-16 lg:w-3/12 xl:w-2/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
+            <div className="hidden md:block md:w-8/12  right-7 transform -translate-y-1 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
               <Image
                 className=""
                 src="/Astraballons.png"
                 alt="astraballons"
                 layout="responsive"
-                height={2064}
+                height={2764}
                 width={1739}
               />
             </div>
-            <div className="hidden w-2/6 left-24  md:1/12 transform -translate-y-12 md:transform:-md:translate-y-6 lg:w-2/12 xl:transform xl:-translate-y-[0vh]">
+            <div className="relativ z-20 hidden w-2/6 left-24 md:block  md:1/12 transform -translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:-translate-y-[0vh]">
               <Image
                 src="/rettungsring.png"
                 alt="illustration"
@@ -159,7 +175,7 @@ export default function Home({ posts }) {
                 width={473}
               />
             </div>
-            <div className="hidden md:block transform -translate-y-12 right w-5/12  md:transform:-translate-y-24 lg:transform lg:w-3/12 lg:-transform: lg:translate-y-0">
+            <div className="hidden md:block transform -translate-y-12 right w-5/12  md:transform:-translate-y-24 lg:transform lg:w-3/12 lg:-transform: lg:-translate-y-24">
               <Image
                 src="/Graffity_StPauli.png"
                 alt="llustration"
@@ -205,14 +221,14 @@ export default function Home({ posts }) {
 
           {/*======================================= Ende Section B =======================================================================*/}
 
-          <h1 className="headingB  left-1 text-[4rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[56vh]">
+          <h1 className="headingA  left-1 text-[4rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[62vh]">
             Die Kneipe
           </h1>
 
           {/*========================================================== section E ===============================================================*/}
 
           <section className=" xl:mt-[16vh]">
-            <div className="-mt-20 contain1er mx-auto rounded-2xl bg-slate-800 w-9/12">
+            <div className="-mt-20 container mx-auto rounded-2xl bg-slate-800 w-9/12">
               <p className=" mt-16 text-gray-100  text-sm text-justify p-5 sm:mt-10 lg:-mb-160 lg:-mt-20 lg:text-3xl lg:leading-loose">
                 Gemütlich nordisches Ambiente im Herzen der Altstadt Freiburgs
                 gelegen. Orginales Waterkant-Feeling mit Astra, Flens & Co.
