@@ -68,3 +68,4 @@ const SvgAstra = (props) => (
 );
 
 export default SvgAstra;
+

@@ -60,10 +60,10 @@ const MobileNav = () => {
         ></button>
         <nav className="fixed h-full mt-8">
           {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4 ">
+            <div key={link.title} className="w-screen border-b border-slate-800 shadow-slater-200xl hover:bg-yellow-600 px-12 py-4 ">
               <Link
                 href={link.href}
-                className="text-2xl font-bold w-screen tracking-widest text-gray-300 hover:bg-yellow-600   hover:text-red-800 dark:text-gray-100"
+                className="text-2xl font-bold w-full tracking-widest text-gray-200 hover:text-gray-800 dark:text-gray-100"
                 onClick={onToggleNav}
               >
                 {link.title}

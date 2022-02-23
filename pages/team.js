@@ -43,7 +43,7 @@ const team = () => {
                 <span className="text-2xl text-blue-800 font-bold ">
                   Obermaat
                 </span>
-                <p className="mt-4  text-1xl text-gray-300 leading-relaxed xl:text-xl">
+                <p className="mt-4  text-1xl text-gray-300 leading-relaxed xl:text-2xl">
                   Simon ist Teammitglied der ersten Stunde. Im richtigen Leben
                   studiert Simon an der Uni Erziehungswissenschaften und hat
                   gerade seinee Master absolviert. Simon ist ausgewiesener SC
@@ -66,7 +66,7 @@ const team = () => {
                 <span className="text-2xl text-blue-800 font-bold ">
                   Captain
                 </span>
-                <p className="mt-4 text-1xl text-gray-300 leading-relaxed xl:text-xl">
+                <p className="mt-4 text-1xl text-gray-300 leading-relaxed xl:text-2xl">
                   Volker Schneider und Michael Schreck haben 2017 die Idee und
                   das Konzept des Rettungsankers initiert und liessen den Kahn
                   in September 2017 vom Stapel laufen. Seit Januar 2020 zeigt
@@ -90,7 +90,7 @@ const team = () => {
                 <span className="text-2xl text-blue-800 font-bold ">
                   I. Offizierin
                 </span>
-                <p className="mt-4 text-1xl xl: text-center text-sm text-gray-300 leading-relaxed xl:text-xl ">
+                <p className="mt-4 text-1xl xl: text-center text-sm text-gray-300 leading-relaxed xl:text-2xl ">
                   Auch Anne ist Teammitglied derersten Stunde nach Stapelablauf
                   des Rettungsanker-Mit Ihrer langjährigen Gastroerfahrung ist
                   sie ein wichtiger Pfeiler im Team des Rettungsankers

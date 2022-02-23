@@ -30,7 +30,7 @@ export default function MyModal5() {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto"
+          className="fixed inset-0 z-10 overflow-y-auto bg-slate-500/75"
           onClose={closeModal}
         >
           <div className="min-h-screen px-4 text-center">
@@ -72,7 +72,7 @@ export default function MyModal5() {
                 </Dialog.Title>
 
                 <div className="mt-2 lg:mt-1 ">
-                  <p className="newspaper text-justify p-3 text-gray-100 text-xs lg:text-xl">
+                  <p className="newspaperA text-justify p-3 text-gray-100 text-xs lg:text-xl">
                     Der Rettungsanker und seine Räumlichkeiten sind eine ideale
                     Location um Ihre privaten oder geschäftlichen Anlässe wie
                     Geburtstage, Hochzeiten und Verlobungen, aber auch Firmen-
@@ -85,10 +85,8 @@ export default function MyModal5() {
                     anbieten. Hier sind Ihren Wünschen im Grunde genommen keine
                     Grenzen gesetzt. Unsere Koperationspartner{" "}
                     <LogoLeckerladen
-                      className="inline"
-                      height="40"
-                      width="120"
-                    ></LogoLeckerladen>
+                      className="inline h-36 w-28"
+                                         ></LogoLeckerladen>
                     sind für ausgezeichnete und ideenreiche Apero-Buffets oder
                     Menues besoders ausgewiesen und werden nichts unversucht
                     lassen Ihre Wünsche und Ideen umzusetzten. Nähere

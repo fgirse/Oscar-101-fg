@@ -16,10 +16,10 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="w-screen flex flex-col justify-between bg-gray-900 h-screen">
         <InfoBar></InfoBar>
-        <header className="flex items-center justify-between lg:py-3">
+        <header className="flex items-center justify-between xl:p-4">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-end"></div>
+              <div className="flex items-end justify-end"></div>
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">

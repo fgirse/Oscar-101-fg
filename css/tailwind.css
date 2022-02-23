@@ -21,6 +21,7 @@
     font-style: normal;    
   }
 
+
   @font-face {
     font-family: "AD";
     font-weight: 700;
@@ -72,7 +73,32 @@
     
   }
 
+  .newspaper {
+    columns: 166px 2;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: "Architects Daughter";
+    column-rule: thin inset orange;
+  }
 
+  newspaperC {
+    columns: 66px 3;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: "Architects Daughter";
+    column-rule: thin inset orange;
+  }
+
+
+  .box {
+    padding: 10vw;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: "Architects Daughter";
+  }
 
 
 
