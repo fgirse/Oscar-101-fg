@@ -23,7 +23,7 @@ import { getAllFilesFrontMatter } from "/lib/mdx";
 import formatDate from "/lib/utils/formatDate";
 import NewsletterForm from "/components/NewsletterForm";
 import SectionContainer from "../components/SectionContainer";
-
+import LBox from'../components/Lightbox';
 import {
   jsx,
   Flex,
@@ -71,7 +71,7 @@ export default function Home({ posts }) {
       />
       <SectionContainer>
         <div className="mx-auto bg-slate-900 min-h-screen flex flex-col w-12/12">
-          <section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero3.png')] w-full h-[calc(100vh-36vh)] bg-cover bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-12vh-16vh)]"></section>
+          <section className="mt-5 mx-auto flex-grow-1 border-t-4 border-b-4 border-amber-400 bg-[url('/Hero3.png')] w-full h-[calc(100vh-40vh)] bg-cover bg-center md:bg-[url('/Hero.png')] md:bg-cover bg-no-repeat md:w-[100vw] md:h-[calc(100vh-12vh-16vh)]"></section>
           <section className="hidden lg:block lg:mx-auto lg:mt-2 lg:rounded-3xl lg:w-screen bg-slate-900 lg:h-[14vh] ">
             <div className="grid grid-cols-1 md:grid md:grid-cols-[7fr_6fr]  items-center justify-center">
               <div className="">
@@ -92,13 +92,14 @@ export default function Home({ posts }) {
                 <p className="mb-2 text-center text-3xl font-bold tracking-tight text-yellow-500 dark:text-white uppercase md:text-4xl xl:text-5xl">
                   öfffnungzeiten
                 </p>
-                <p className="text-center mt-2 text-lg sm:text-2xl text-gray-300 md:text-base lg:text-xl">
+                <p className="text-center mt-2 text-sm sm:text-1xl text-gray-300 md:text-base lg:text-xl">
                   Montag-Donnerstag: 18 bis 24 Uhr
                 </p>
-                <p className="text-center text-lg sm:text-2xl md:text-base  text-gray-300 lg:text-xl xl:text-">
+                <p className="text-center text-sm
+                 sm:text-1xl md:text-base  text-gray-300 lg:text-xl xl:text-">
                   Freitag und Samstag: 15 bis 03 Uhr
                 </p>
-                <p className="text-center text-xs sm:text-2xl md:text-base  text-gray-300 lg:text-xl xl:text-">
+                <p className="text-center text-lg sm:text-1xl md:text-base  text-gray-300 lg:text-xl xl:text-">
                   Sonntag: Ruhetag
                 </p>
  
@@ -106,7 +107,7 @@ export default function Home({ posts }) {
 
               </div>
 {/*================================================ Modale6 =======================================================================================*/}
-              <div className="mt- w-11/12 h-24  text-4xl px-8 bg-orange-600 hover:bg-slate-500 mx-auto md:hidden">
+              <div className="mt-16 w-11/12 h-24 rounded-2xl text-4xl px-8 bg-orange-600 hover:bg-slate-500 mx-auto md:hidden">
                 <Modal6 className="h-8"></Modal6>
               </div>
 {/*=============n=================================== Modale6 ende =======================================================================================*/}
@@ -114,7 +115,7 @@ export default function Home({ posts }) {
                 <div className="mx-auto mt-5 w-11/12 flex flex-col items-center bg-red-900 rounded-2xl border shadow-md md:flex-row lg:w-11/12 -gray-700 dark:bg-gray-800 ">
                 <img className="p-3" src="/portrait-mick1.png" alt="portrait" />
                 <div className="w-full flex flex-col justify-between p-4 leading-normal">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-yellow-500 dark:text-white xl:text-5xl">
+                  <h5 className="mb-5 text-2xl font-bold tracking-tight text-yellow-500 dark:text-white xl:text-5xl">
                     "Moin Moin"
                   </h5>
                   <p className="md:newspaperA mb-1 font-normal text- text-gray-100 dark:text-gray-400">
@@ -131,12 +132,12 @@ export default function Home({ posts }) {
                     schreiben Sie uns eine email. Wir freuen uns Sie im
                     Rettungsanker begrüsssen zu dürfen <br />
                     <br />
-                    Michael Schreck und das Team des Rettungsanker.                  </p>
+                    Michael Schreck und das Team des Rettungsankers</p>
                 </div>
               </div>
             </div>
             
-            <div className=" mt-[99vh] mx-auto flex flex-col w-full md:-mt-40 px-12 md:w-4/12 md:absolute left-16 items-start justify-start">
+            <div className=" mt-[115vh] mx-auto flex flex-col w-full md:-mt-40 px-12 md:w-4/12 md:absolute left-16 items-start justify-start">
                   <button
                     type="button"
                     className="inline-flex justify-center px-4 py-2 text-xl md:text-4xl font-medium font-sans text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 lg:mb-6">
@@ -150,7 +151,7 @@ export default function Home({ posts }) {
           {/*========================== ENDE SECTION A ===================================================*/}
         
           <div className="mt-12 flex flex-col md:flex md:flex-row items-baseline">
-            <div className="w-5/12 absolute left-32 md:relative  z-10 mt- md:transform md:-translate-y-10 md:w-4/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
+            <div className="w-4/12 absolute left-32 transform translate-y-36 md:relative md:transform md:-translate-y-10 md:w-4/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
               <Image
                 src="/lighthousebw.svg"
                 cIOIC
@@ -160,7 +161,7 @@ export default function Home({ posts }) {
                 width={473}
               />
             </div>
-            <div className=" absolute w-4/12  left-36 p-2 transform translate-y-[57vh] md:static md:py-0 md:w-8/12 md:-translate-y-1 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
+            <div className=" absolute w-4/12  left-36 p-2 transform translate-y-[55vh] md:static md:py-0 md:w-8/12 md:-translate-y-1 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
               <Image
                 className=""
                 src="/Astraballons.png"
@@ -170,7 +171,7 @@ export default function Home({ posts }) {
                 width={1739}
               />
             </div>
-            <div className="absolute left-24 z-20 transform translate-y-[105vh] w-3/6  md:relative md:block m  md:1/12 md:transform md:-translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:-translate-y-[0vh]">
+            <div className="absolute left-24 z-20 transform translate-y-[95vh] w-3/6  md:relative md:block m  md:1/12 md:transform md:-translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:-translate-y-[0vh]">
               <Image
                 src="/rettungsring.png"
                 alt="illustration"
@@ -225,7 +226,7 @@ export default function Home({ posts }) {
 
           {/*======================================= Ende Section B =======================================================================*/}
 
-          <h1 className="headingA relative left-1 text-[4rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[66vh]">
+          <h1 className="mt-10 headingA relative left-1 text-[3rem] text-yellow-500 text-center md:text-8xl lg:text-[10rem] xl:-mt-[66vh]">
             Die Kneipe
           </h1>
 
@@ -241,7 +242,7 @@ export default function Home({ posts }) {
                   className="inline h-16 w-80"> 
                 </SCLogo>
                 <br /> Live in unserer{" "}
-                <Link href="/sportarena">
+                <Link href="/sportareNa">
                   <a className="text-yellow-600 hover:text-amber-300 hover:border-b-4 hover:border-slate-400 text-sm lg:text-4xl">
                     Sportarena.
                   </a>
@@ -253,7 +254,7 @@ export default function Home({ posts }) {
             </div>
 
             <ThemeProvider theme={theme}>
-              <div className="-mt-20 mx-auto lg:-mt-14 lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center p-2 md:p-6  md:grid-cols-3 md:justify-around lg:item11s-center lg:gap-x-5">
+              <div className="-mt-20 mx-auto p-16 lg:-mt-14 lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center md:p-6  md:grid-cols-3 md:justify-around lg:item11s-center lg:gap-x-5">
                 <Card
                   className="justify-self-center"
                   mb={3}
@@ -363,9 +364,9 @@ export default function Home({ posts }) {
             />
           </div>
           {/*========================================================== section F ==============================================================*/}
-          <section className="-mt-36 ml-2 mx=auto w-11/12">
+          <section className=" ml-2 mx=auto w-11/12">
             <ThemeProvider theme={theme}>
-              <div className=" mx-auto lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center p-2 md:p-6  md:grid-cols-3 md:justify-around lg:items-center lg:gap-x-3">
+              <div className=" mx-auto lg:w-11/12 lg:max-w-8xl grid grid-cols-1 justify-center items-center md:p-6  md:grid-cols-3 md:justify-around lg:items-center lg:gap-x-3">
                 <Card
                   className="justify-self-center"
                   mb={5}
@@ -519,7 +520,15 @@ export default function Home({ posts }) {
               </div>
             </div>
           </section>
+          <section className="mb-16">
+                  <div className="w-12/12 border border-slate-200 rounded-lg mx-auto">
 
+                  <LBox></LBox>
+
+                  </div>
+
+          </section>
+                  
           {/*========================================================== section G ende==============================================================*/}
 
           {/*=======================================  Section C =======================================================================*/}
