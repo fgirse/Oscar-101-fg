@@ -8,6 +8,7 @@ import Astra from "../components/icons/svg/SVGAstra";
 import Flensburger from "../components/icons/svg/SVGFlensburger";
 import SectionContainer from "../components/SectionContainer.js";
 import Getränke from "/components/icons/svg/SVGDrinks.js";
+
 export default function Drinks() {
   return (
     <>

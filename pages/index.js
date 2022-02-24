@@ -109,7 +109,7 @@ export default function Home({ posts }) {
               <div className="mt- w-11/12 h-24  text-4xl px-8 bg-orange-600 hover:bg-slate-500 mx-auto md:hidden">
                 <Modal6 className="h-8"></Modal6>
               </div>
-{/*================================================ Modale6 ende =======================================================================================*/}
+{/*=============n=================================== Modale6 ende =======================================================================================*/}
 
                 <div className="mx-auto mt-5 w-11/12 flex flex-col items-center bg-red-900 rounded-2xl border shadow-md md:flex-row lg:w-11/12 -gray-700 dark:bg-gray-800 ">
                 <img className="p-3" src="/portrait-mick1.png" alt="portrait" />
@@ -150,7 +150,7 @@ export default function Home({ posts }) {
           {/*========================== ENDE SECTION A ===================================================*/}
         
           <div className="mt-12 flex flex-col md:flex md:flex-row items-baseline">
-            <div className="w-5/12 absolute left-32  transform translate-y-32 md:relative  z-10 mt- md:transform -translate-y-10 md:w-4/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
+            <div className="w-5/12 absolute left-32 md:relative  z-10 mt- md:transform md:-translate-y-10 md:w-4/12 xl:w-3/12 xl:transform: xl:-translate-y-48">
               <Image
                 src="/lighthousebw.svg"
                 cIOIC
@@ -160,7 +160,7 @@ export default function Home({ posts }) {
                 width={473}
               />
             </div>
-            <div className=" absolute w-4/12  left-36 p-2 transform translate-y-[57vh] md:static md:py-0 md:w-8/12  transform -translate-y-1 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
+            <div className=" absolute w-4/12  left-36 p-2 transform translate-y-[57vh] md:static md:py-0 md:w-8/12 md:-translate-y-1 md:right-16 lg:w-3/12 xl:w-3/12 float-right md:transform md:-translate-y- xl:transforn z-20 xl:-translate-y-[vh]">
               <Image
                 className=""
                 src="/Astraballons.png"
@@ -170,7 +170,7 @@ export default function Home({ posts }) {
                 width={1739}
               />
             </div>
-            <div className="absolute left-24 z-20 transform translate-y-[105vh] w-3/6  md:relative md:block m  md:1/12 transform -translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:-translate-y-[0vh]">
+            <div className="absolute left-24 z-20 transform translate-y-[105vh] w-3/6  md:relative md:block m  md:1/12 md:transform md:-translate-y-12 md:transform:-md:translate-y-6 lg:w-3/12 xl:transform xl:-translate-y-[0vh]">
               <Image
                 src="/rettungsring.png"
                 alt="illustration"
@@ -526,5 +526,13 @@ export default function Home({ posts }) {
         </div>
       </SectionContainer>
     </>
-  );
+    
+)
+ async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('blog')
+
+  return { props: { posts } }
+  
+}
+
 }

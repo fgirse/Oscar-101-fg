@@ -3,7 +3,8 @@
 /* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable prettier/prettier */
 import Document, { Html, Head, Main, NextScript } from "next/document";
-class MyDocument extends Document {
+
+export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="scroll-smooth">
@@ -121,5 +122,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-const team = () => {
+export default function team () {
   return (
     <>
       <section className="flex flex-col items-center justify-between">
@@ -104,5 +104,3 @@ const team = () => {
     </>
   );
 };
-
-export default team;

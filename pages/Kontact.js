@@ -1,6 +1,3 @@
-/* eslint-disable prettier/prettier */
-
-/* eslint-disable prettier/prettier */
 import React from "react";
 import Modal3 from "../components/Modal3.js";
 import Modal4 from "../components/Modal4.js";

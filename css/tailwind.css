@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 
-
-                                                                                                                                                          .task-list-item:before {
-
-@apply hidden;
-                                                                                                                                                            }
-
-                                                                                                                                                               
-                                                                                                                                                            
-
   @font-face {
     font-family: "AC";
     font-weight: 700;

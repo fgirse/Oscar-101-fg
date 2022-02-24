@@ -15,7 +15,6 @@ export default function geschichte() {
   return (
     <>
       <SectionContainer>
-        /{" "}
         <div className="bg-slate-800 w-11/12 h-screen rounded-2xl mx-auto">
           <Timeline />
         </div>
